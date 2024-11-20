@@ -5,5 +5,5 @@ laptop ram management
 * The .gitignore & README.md files to manage this repo itself
 
 ### Screen shot:
-![Run-Time](https://github.com/phucdhcoder19/laptopRamManagement-1406/tree/main/images)
+![Run-Time](https://github.com/phucdhcoder19/laptopRamManagement-1406/blob/main/images/run-time.png)
 © 2022 Bản quyền thuộc về phucdhcoder19 | fb/hoangphuc.bis
