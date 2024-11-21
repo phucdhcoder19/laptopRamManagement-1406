@@ -1,3 +1,4 @@
+[![Laptop Ram Management with CI| © 2024 by phucdhcoder-19](https://github.com/phucdhcoder19/laptopRamManagement-1406/actions/workflows/laptop-ram-ci.yml/badge.svg)](https://github.com/phucdhcoder19/laptopRamManagement-1406/actions/workflows/laptop-ram-ci.yml)
 # Welcome to Laptop-Management Repository
 ### You will find in this repo the following stuff
 * The Java source code used to demonstrate the
