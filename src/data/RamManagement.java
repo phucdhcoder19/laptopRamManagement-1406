@@ -53,21 +53,21 @@ public class RamManagement {
         }
     }
 
-    public void writeFileStream(String url) {
-        try {
-            File file = new File(url);
-            OutputStream os = new FileOutputStream(file);
-            ObjectOutputStream oos = new ObjectOutputStream(os);
-            for (Ram ram : ramList) {
-                oos.writeObject(ram);
-            }
-            os.close();
-            oos.close();
-            System.out.println("write to file successfully!!!");
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-    }
+//    public void writeFileStream(String url) {
+//        try {
+//            File file = new File(url);
+//            OutputStream os = new FileOutputStream(file);
+//            ObjectOutputStream oos = new ObjectOutputStream(os);
+//            for (Ram ram : ramList) {
+//                oos.writeObject(ram);
+//            }
+//            os.close();
+//            oos.close();
+//            System.out.println("write to file successfully!!!");
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+//    }
 
     public int searchRamByID(String code) {
         if (ramList.isEmpty()) {
