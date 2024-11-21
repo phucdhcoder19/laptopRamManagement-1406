@@ -1,0 +1,44 @@
+name: Laptop Ram Management with CI| © 2024 by phucdhcoder-19
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+on:
+  push:
+    branches: [ main ] # Trigger on push events to the main branch  
+  pull_request:
+    branches: [ main ] # Trigger on pull requests to the main branch  
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Check out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Check-out repository
+        uses: actions/checkout@v2
+
+      # Set up JDK 1.8
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      
+      # Build the project with Ant
+      - name: Build project with Ant
+        run: ant -noinput -buildfile build.xml
+      
+      # Distribute jar/war files
+      - name: Distribute jar/war file
+        run: mkdir staging && cp dist/*.jar staging
+      
+      # Upload jar/war files as artifacts
+      - name: Upload jar/war artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: 1.0-SNAPSHOT.jar
+          path: staging
+
+# End of CI workflow file
